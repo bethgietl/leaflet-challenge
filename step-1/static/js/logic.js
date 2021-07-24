@@ -23,7 +23,7 @@ function createFeatures(earthquakeData) {
   
   function createCircleMarker(feature, latlng){
     let options = {
-        radius:feature.properties.mag*8,
+        radius: feature.properties.mag*8,
         fillColor: chooseColor(feature.properties.mag),
         color: chooseColor(feature.properties.mag),
         weight: 1,
@@ -66,7 +66,7 @@ function chooseColor(mag) {
 
 // Set up the legend
 var legend = L.control({ position: "bottomright" });
-legend.onAdd = function(map) {
+legend.onAdd = function() {
   var div = L.DomUtil.create("div", "info legend");
   var grades = [0, 1, 2, 3, 4, 5];
   var colors = ["#7CFC00",  "#9ACD32", "#FFD700", "#FFA500", "#FF6347", "#DC143C"];
